@@ -22,4 +22,5 @@ jobs:
         go-version: '1.20'
 
     - name: Build
-      run: go build -v ./workshop-service
+      working-directory: workshop-service
+      run: go build -v ./...
