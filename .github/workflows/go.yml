@@ -22,15 +22,15 @@ jobs:
         go-version: '1.21.4'
 
     - name: Build
-      working-directory: workshop-service
-      run: go build -v ./...
+        run: go build -o ../bin/workshop -v ./...
+        working-directory: workshop-service
 
     - name: Upload /bin folder as artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: workshop
-        path: bin/
-        retention-days: 1
+        uses: actions/upload-artifact@v3
+        with:
+          name: workshop
+          path: bin/
+          retention-days: 1
 
   docker:
     # Dependency on previous step to complete
