@@ -24,3 +24,10 @@ jobs:
     - name: Build
       working-directory: workshop-service
       run: go build -v ./...
+
+    - name: Upload /bin folder as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: workshop
+        path: bin/
+        retention-days: 1
