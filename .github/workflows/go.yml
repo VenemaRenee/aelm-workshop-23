@@ -54,7 +54,7 @@ jobs:
         uses: docker/metadata-action@v4
         id: meta
         with:
-          images: aelm-workshop-23
+          images: reneevenema/aelm-workshop-23
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
